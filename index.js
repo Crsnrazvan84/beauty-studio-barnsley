@@ -11,6 +11,7 @@ const navSlide = () => {
             $('body').addClass('navBar-open');
         } else {
             nav.style.animation = `navSlideOut 0.5s`;
+            $('body').removeClass('navBar-open');
         }
 
         // Amimate links
