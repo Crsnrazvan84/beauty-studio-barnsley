@@ -13,6 +13,7 @@ header {
     align-items: center;
     min-height: 10vh;
     position: fixed;
+    z-index: 1;
     top: 0px;
     width: 100%;
     background-color: #35424a;
@@ -121,27 +122,32 @@ section h1 {
 /* CONTACT-PAGE */
 
 .container {
-    border: 2px solid green;;
+    position: relative;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    align-items: center;
 }
 
 .mapouter {
     position: relative;
     text-align: right;
-    height: 500px;
-    width: 600px;
+    width: 50%;
+    height: 410px;
 }
 
 .gmap_canvas {
+    position: relative;
+    border-radius: 5px;
     overflow: hidden;
     background: none !important;
-    height: 500px;
-    width: 600px;
+    height: 100%;
+    width: 100%;
 }
 
 #contactForm {
-    width:25%;
+    width: 25%;
+    height: 410px;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 235, 235, 0.5);
@@ -156,16 +162,15 @@ section h1 {
 
 #contactForm input {
     margin: 5px;
-   height: 30px;
-   border: none;
-   border-bottom: 1px solid #e8491d;
-   background: none;
-   outline: none;
-   padding-left: 10px;
-
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #e8491d;
+    background: none;
+    outline: none;
+    padding-left: 10px;
 }
 
-#contactForm textarea{
+#contactForm textarea {
     margin: 5px;
     padding: 10px;
     outline: none;
@@ -184,12 +189,10 @@ section h1 {
     background-color: #e8491d;
     color: rgb(255, 235, 235);
     transition-duration: .3s;
-    
-
 }
 
 #contactForm button:hover {
-    color:white;
+    color: white;
     background-color: #35424a;
 }
 
@@ -269,11 +272,13 @@ section h1 {
     body {
         overflow-x: hidden;
     }
+
     .header-links {
         position: absolute;
         right: 0px;
         height: 90vh;
         top: 10vh;
+        z-index: 1;
         background-color: #35424a;
         display: flex;
         flex-direction: column;
@@ -282,11 +287,9 @@ section h1 {
         transform: translateX(100%);
         animation: navSlideOut 0s forwards;
     }
-
-    .header-links li:last-of-type{
+    .header-links li:last-of-type {
         margin-bottom: 10vh;
     }
-
     .header-links li {
         opacity: 0;
     }
@@ -295,9 +298,24 @@ section h1 {
     }
     .nav-active {
         animation: navSlide 0.5s ease both;
-      }
-    
-      .nav-off {
+    }
+    .nav-off {
         animation: navSlideOut 0.5s ease both;
-      }
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px 10px;
+       
+    }
+
+    #contactForm {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mapouter {
+        width: 100%;
+     
+    }
 }
