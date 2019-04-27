@@ -273,6 +273,10 @@ section h1 {
         overflow-x: hidden;
     }
 
+    .navBar-open {
+        overflow: hidden;
+    }
+
     .header-links {
         position: absolute;
         right: 0px;
