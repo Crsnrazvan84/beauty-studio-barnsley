@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color:transparent;
 }
 
 /* HEADER */
@@ -86,6 +87,7 @@ section {
 .main-page {
     display: flex;
     flex-direction: column;
+    width: 65%;
     align-items: center;
     color: #35424a;
     background-color: rgba(255, 223, 223, 0.7);
@@ -141,7 +143,8 @@ section h1 span{
 }
 
 .price {
-    background-color: lime;
+    background-color: rgb(213, 142, 255);
+    margin-top: 12px;
     border-radius: 3px;
     padding: 5px;
 }
@@ -291,7 +294,13 @@ section h1 span{
     /* services */
     .box {
         flex-direction: column;
+        margin: 0px auto;
     }
+
+    .box:last-child{
+        margin-bottom: 20px;
+    }
+
     .box-item {
         width: 90%;
         margin-top: 25px;
@@ -310,8 +319,26 @@ section h1 span{
 }
 
 @media screen and (max-width: 768px) {
+
     body {
         overflow-x: hidden;
+      
+    }
+
+    header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #branding h1 {
+        font-size: 15px;
+    }
+
+    .main-page {
+        width: 100%;
+        margin: 10px;
+        position: relative;
+        bottom: 15vh;
     }
 
     .navBar-open {
@@ -338,6 +365,7 @@ section h1 span{
     .header-links li {
         opacity: 0;
     }
+
     .burger {
         display: block;
     }
@@ -352,6 +380,18 @@ section h1 span{
         flex-direction: column;
         padding: 20px 10px;
        
+    }
+
+    /* contact */
+
+    #contact-motto {
+        margin: 20px;
+        margin-bottom: 0px;
+        
+    }
+
+    #contact-motto h1 {
+        font-size: 25px;
     }
 
     #contactForm {
