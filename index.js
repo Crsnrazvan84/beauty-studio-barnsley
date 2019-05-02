@@ -1,7 +1,29 @@
+const burger = document.querySelector('.burger');
+const burger1 = document.querySelector('.line1');
+const burger2 = document.querySelector('.line2');
+const burger3 = document.querySelector('.line3');
+const nav = document.querySelector('#header-links');
+const navLinks = document.querySelectorAll('#header-links li');
+
+function initMenu(loadPage) {
+    $('#' + loadPage + '-link').addClass('current');
+
+    var links = document.querySelectorAll("#header-links a");
+
+    for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function () {
+
+            $('.page').hide();
+            $('.menuButtons').removeClass('current');
+            var page = this.getAttribute("data-page");
+            $('#' + page + '-page').fadeIn();
+            $('#' + page + '-link').addClass('current');
+        };
+    }
+}
+
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.header-links');
-    const navLinks = document.querySelectorAll('.header-links li');
+
 
     burger.addEventListener('click', () => {
         // toggle nav
@@ -23,13 +45,30 @@ const navSlide = () => {
             }
         });
 
-        
-  
-      // burger animation
-      burger.classList.toggle("toggle");
-  
+
+
+        // burger animation
+        burger.classList.toggle("toggle");
+
     });
 
 }
 
+function navClose() {
+    window.addEventListener('mouseup', function (event) {
+        if ((nav.classList.contains('nav-active')) && (event.target != nav) && (event.target != burger1 && event.target != burger2 && event.target != burger3)) {
+            nav.style.animation = `navSlideOut 0.5s`;
+            nav.classList.remove('nav-active');
+            burger.classList.remove("toggle");
+            $('body').removeClass('navBar-open');
+            navLinks.forEach((link) => {
+                link.style.animation = "";
+            })
+        }
+    });
+}
+
+
+initMenu('home');
 navSlide();
+navClose();

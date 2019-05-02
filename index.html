@@ -12,17 +12,25 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="home-page">
+<body class="home">
     <header>
         <div id="branding">
             <img src="img/logo.jpg" alt="logo">
             <h1>BEAUTY STUDIO BARNSLEY</h1>
         </div>
-        <ul class="header-links">
-            <li class="current"><a href="index.html">HOME</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="offers.html">OFFERS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+        <ul id="header-links">
+            <li>
+                <a href="#" id="home-link" data-page="home" class="menuButtons">HOME</a>
+            </li>
+            <li>
+                <a href="#"  id="services-link" data-page="services" class="menuButtons">SERVICES</a>
+            </li>
+            <li>
+                <a href="#"  id="offers-link" data-page="offers" class="menuButtons">OFFERS</a>
+            </li>
+            <li>
+                <a href="#"  id="contact-link" data-page="contact" class="menuButtons">CONTACT</a>
+            </li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -30,16 +38,112 @@
             <div class="line3"></div>
         </div>
     </header>
-    <section>
+    <section id="home-page" class="page">
         <div class="main-page">
             <h1>You will love the friendly atmosphere here at <span>Beauty Studio</span>. <br>
-                All uor beauty services are carried out bu professional products
+                All our beauty services are carried out by professional products
                 and fully qualified staff </h1>
 
         </div>
     </section>
+
+    <section id="services-page" class="page">
+        <div class="box">
+            <div class="box-item">
+                <h2>Eyebrows reshape</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £7</div>
+            </div>
+            <div class="box-item">
+                <h2>Eyebrows tint</h2>
+                <img src="img/face.jpg" alt="Massage">
+                <div class="price">Price: £5</div>
+            </div>
+            <div class="box-item">
+                <h2>Lip / Chin / Mustache</h2>
+                <img src="img/gene.jpg" alt="Massage">
+                <div class="price">Price: £4</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-item">
+                <h2>Full legs / Half legs</h2>
+                <img src="img/wax.jpg" alt="Massage">
+                <div class="price">Price: £14 / £10</div>
+            </div>
+            <div class="box-item">
+                <h2>Full arms / Half arms</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £10 / £7</div>
+            </div>
+            <div class="box-item">
+                <h2>Underarms</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £5</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-item">
+                <h2>Full bikini</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £15</div>
+            </div>
+            <div class="box-item">
+                <h2>Bikini line</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £5</div>
+            </div>
+            <div class="box-item">
+                <h2>Full back / abdomen</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £10</div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-item">
+                <h2>Abdomen line</h2>
+                <img src="img/masaj.jpg" alt="Massage">
+                <div class="price">Price: £5</div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="offers-page" class="page">
+
+    </section>
+
+    <section id="contact-page" class="page">
+        <div id="contact-motto">
+            <h1>Because <span>You</span> need time for <span>Yourself</span></h1>
+        </div>
+        <div class="container">
+
+            <form id="contactForm">
+                <h2>Contact</h2>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="text" name="Phone" id="Phone" placeholder="Phone number">
+                <input type="email" name="emali" id="email" placeholder="E-mail">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit" value="Send">Send</button>
+
+            </form>
+
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Fitzwilliam%20St%2C%20Barnsley%20S70%202RH%2C%20Regatul%20Unit&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous">
+        </script>
     <script src="index.js"></script>
 
 </body>

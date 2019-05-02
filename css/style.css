@@ -39,24 +39,24 @@ header img {
     align-items: center;
 }
 
-.header-links {
+#header-links {
     display: flex;
     justify-content: space-around;
     width: 30%;
     list-style: none;
 }
 
-.header-links a {
+#header-links a {
     text-decoration: none;
     color: rgb(255, 235, 235);
 }
 
-.header-links a:hover {
+#header-links a:hover {
     color: #aaa;
 }
 
-.current a {
-    color: #e8491d;
+.current {
+    color: #e8491d !important;
 }
 
 .burger {
@@ -65,10 +65,10 @@ header img {
 }
 
 .burger div {
-    width: 25px;
+    width: 18px;
     height: 3px;
     background-color: rgb(255, 223, 223);
-    margin: 5px;
+    margin: 3px;
 }
 
 /*  HOME-PAGE */
@@ -106,13 +106,11 @@ section h1 span{
    font-weight: 800;
 }
 
-.home-page {
-    background-position-y: -100px;
-}
+
 
 /* SERVICES-PAGE */
 
-.services {
+#services-page {
     flex-direction: column;
 }
 
@@ -150,7 +148,7 @@ section h1 span{
 }
 
 /* CONTACT-PAGE */
-#contact {
+#contact-page {
     flex-direction: column;
     
 }
@@ -161,6 +159,12 @@ section h1 span{
     padding: 20px;
     margin-bottom: 20px;
     color: #35424a;
+    text-align: center;
+}
+
+#contact-motto h1 span {
+    color: #e8491d;
+   font-weight: 800;
 }
 
 .container {
@@ -273,6 +277,8 @@ section h1 span{
 
 .toggle .line1 {
     transform: rotate(-135deg) translate(-5px, 6px);
+    position: relative;
+    top: 2px;
 }
 
 .toggle .line2 {
@@ -281,13 +287,18 @@ section h1 span{
 
 .toggle .line3 {
     transform: rotate(135deg) translate(-5px, -6px);
+    position: relative;
+    bottom: 1px;
 }
 
 @media screen and (max-width: 1024px) {
+    body {
+        font-size: small;
+    }
     #branding h1 {
         font-size: 20px;
     }
-    .header-links {
+    #header-links {
         width: 50%;
     }
 
@@ -325,11 +336,6 @@ section h1 span{
       
     }
 
-    header {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
     #branding h1 {
         font-size: 15px;
     }
@@ -345,7 +351,7 @@ section h1 span{
         overflow: hidden;
     }
 
-    .header-links {
+    #header-links {
         position: absolute;
         right: 0px;
         height: 90vh;
@@ -359,16 +365,21 @@ section h1 span{
         transform: translateX(100%);
         animation: navSlideOut 0s forwards;
     }
-    .header-links li:last-of-type {
+    #header-links li:last-of-type {
         margin-bottom: 10vh;
     }
-    .header-links li {
+    #header-links li {
         opacity: 0;
     }
 
     .burger {
         display: block;
     }
+
+    .burger div {
+        transition: all 0.5s ease;
+    }
+
     .nav-active {
         animation: navSlide 0.5s ease both;
     }
@@ -387,11 +398,10 @@ section h1 span{
     #contact-motto {
         margin: 20px;
         margin-bottom: 0px;
-        
     }
 
     #contact-motto h1 {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     #contactForm {
