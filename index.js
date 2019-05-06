@@ -6,6 +6,7 @@ const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('#header-links li');
 
 function initMenu(loadPage) {
+    $('#' + loadPage + '-page').show();
     $('#' + loadPage + '-link').addClass('current');
 
     var links = document.querySelectorAll("#header-links a");
@@ -68,7 +69,7 @@ function navClose() {
     });
 }
 
-
+$('.page').hide();
 initMenu('home');
 navSlide();
 navClose();
