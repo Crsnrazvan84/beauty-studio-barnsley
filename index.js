@@ -24,8 +24,6 @@ function initMenu(loadPage) {
 }
 
 const navSlide = () => {
-
-
     burger.addEventListener('click', () => {
         // toggle nav
         nav.classList.toggle('nav-active');
@@ -46,13 +44,9 @@ const navSlide = () => {
             }
         });
 
-
-
         // burger animation
         burger.classList.toggle("toggle");
-
     });
-
 }
 
 function navClose() {

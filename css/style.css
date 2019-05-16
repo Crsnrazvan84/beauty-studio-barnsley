@@ -95,7 +95,6 @@ section {
     padding: 20px;
 }
 
-
 .main-page h1, #contact h1 {
     text-align: center;
     font-size: 30px;
@@ -106,10 +105,7 @@ section h1 span{
    font-weight: 800;
 }
 
-
-
 /* SERVICES-PAGE */
-
 #services-page {
     flex-direction: column;
 }
@@ -157,7 +153,7 @@ section h1 span{
     background-color: rgba(255, 223, 223, 0.7);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 40px auto;
     color: #35424a;
     text-align: center;
 }
@@ -172,25 +168,36 @@ section h1 span{
     display: flex;
     justify-content: space-around;
     width: 100%;
+  padding-bottom: 50px;
     align-items: center;
 }
 
-.mapouter {
-    background-color: rgba(255, 223, 223, 0.7);
-    border-radius: 5px;
-    position: relative;
-    text-align: right;
-    width: 50%;
-    height: 410px;
+#contact-details {
+    background-color: rgba(255, 235, 235, 0.5);
+    border-radius: 7px;
+    padding: 15px;
+    color: #35424a;
 }
 
-.gmap_canvas {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    background: none !important;
-    height: 100%;
-    width: 100%;
+#contact-details h4 {
+    color: #e8491d;
+    margin: 15px auto 5px;
+}
+
+#contact-details a {
+    text-decoration: none;
+}
+
+#contact-logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.logo {
+    width: 30px;
 }
 
 #contactForm {
@@ -244,8 +251,26 @@ section h1 span{
     background-color: #35424a;
 }
 
-/* NAVBAR & BURGER */
+.mapouter {
+    background-color: rgba(255, 223, 223, 0.7);
+    border-radius: 5px;
+    position: relative;
+    text-align: right;
+    width: 80%;
+    margin-bottom: 40px;
+    height: 500px;
+}
 
+.gmap_canvas {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* NAVBAR & BURGER */
 @keyframes navSlide {
     from {
         transform: translateX(100%);
@@ -329,6 +354,7 @@ section h1 span{
     }
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
 
     body {
@@ -394,7 +420,6 @@ section h1 span{
     }
 
     /* contact */
-
     #contact-motto {
         margin: 20px;
         margin-bottom: 0px;
@@ -404,13 +429,15 @@ section h1 span{
         font-size: 18px;
     }
 
+    #contact-details {
+        margin-bottom: 20px;
+    }
+    
     #contactForm {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .mapouter {
-        width: 100%;
-     
+        width: 94%;
     }
 }
