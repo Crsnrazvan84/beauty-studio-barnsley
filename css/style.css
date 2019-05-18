@@ -37,6 +37,7 @@ header img {
     font-size: 25px;
     display: flex;
     align-items: center;
+    cursor: default;
 }
 
 #header-links {
@@ -100,12 +101,14 @@ section {
     text-align: center;
     font-size: 40px;
     font-family: 'Tangerine', cursive;
+    cursor: default;
 }
 
 section h1 span{
    color: #e8491d;
    font-family: 'Tangerine', cursive;
    font-weight: 800;
+   cursor: default;
 }
 
 /* SERVICES-PAGE */
@@ -140,11 +143,16 @@ section h1 span{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
 }
 
+.box-item h2 {
+    cursor: default;
+}
+
 .price {
     background-color: rgb(213, 142, 255);
     margin-top: 12px;
     border-radius: 3px;
     padding: 5px;
+    cursor: default;
 }
 
 /* CONTACT-PAGE */
@@ -164,6 +172,7 @@ section h1 span{
 #contact-motto h1 span {
     color: #e8491d;
    font-weight: 800;
+   cursor: default;
 }
 
 .container {
@@ -186,6 +195,11 @@ section h1 span{
 #contact-details h4 {
     color: #e8491d;
     margin: 15px auto 5px;
+    cursor: default;
+}
+
+#contact-details p {
+    cursor: default;
 }
 
 #contact-details a {
@@ -223,6 +237,7 @@ section h1 span{
 #contactForm h2 {
     color: #35424a;
     text-align: center;
+    cursor: default;
 }
 
 #contactForm input {
