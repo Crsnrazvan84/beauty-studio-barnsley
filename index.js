@@ -4,6 +4,9 @@ const burger2 = document.querySelector('.line2');
 const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('#header-links li');
+const downArrow = document.querySelector('.down-arrow');
+const mapouter = document.querySelector('.mapouter');
+
 
 function initMenu(loadPage) {
     $('#' + loadPage + '-page').show();
@@ -62,6 +65,12 @@ function navClose() {
         }
     });
 }
+
+function scrollDown () {
+    mapouter.scrollIntoView(); 
+}
+
+document.addEventListener('click', scrollDown);
 
 $('.page').hide();
 initMenu('home');

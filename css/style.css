@@ -4,10 +4,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-tap-highlight-color:transparent;
+    scroll-behavior: smooth
 }
 
 /* HEADER */
-
 header {
     display: flex;
     justify-content: space-around;
@@ -256,7 +256,16 @@ section h1 span{
 
 .down-arrow {
     align-self: flex-end;
+    position: relative;
+    bottom: 0;
     width: 75px;
+    cursor: pointer;
+    transition: bottom ease 0.5s;
+}
+
+.down-arrow:hover {
+    
+    bottom: -20px;
 }
 
 #contactForm button:hover {
