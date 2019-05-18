@@ -4,7 +4,9 @@ const burger2 = document.querySelector('.line2');
 const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('#header-links li');
+const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
+const upArrow = document.querySelector('.up-arrow');
 const mapouter = document.querySelector('.mapouter');
 
 
@@ -70,7 +72,14 @@ function scrollDown () {
     mapouter.scrollIntoView(); 
 }
 
-document.addEventListener('click', scrollDown);
+function scrollUp() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+downArrow.addEventListener('click', scrollDown);
+upArrow.addEventListener('click', scrollUp);
+
 
 $('.page').hide();
 initMenu('home');
