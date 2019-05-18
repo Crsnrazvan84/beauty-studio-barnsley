@@ -99,13 +99,13 @@ section {
 .main-page h1, #contact-motto h1 {
     text-align: center;
     font-size: 40px;
-    font-family: "Brush Script MT";
+    font-family: 'Tangerine', cursive;
 }
 
 section h1 span{
    color: #e8491d;
-   font-family: "Brush Script MT";
-   font-weight: 600;
+   font-family: 'Tangerine', cursive;
+   font-weight: 800;
 }
 
 /* SERVICES-PAGE */
@@ -123,8 +123,8 @@ section h1 span{
 
 .box-item {
     width: 30%;
-    height: 450px;
-    padding: 25px;
+    height: 470px;
+    padding: 20px;
     border-radius: 5px;
     color: #35424a;
     background-color: rgba(255, 223, 223, 0.7);
@@ -137,6 +137,7 @@ section h1 span{
 .box-item img {
     width: 90%;
     border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
 }
 
 .price {
@@ -293,10 +294,11 @@ section h1 span{
     background-color: rgba(255, 223, 223, 0.7);
     border-radius: 5px;
     position: relative;
-    text-align: right;
     width: 80%;
     height: 78vh;
     margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .gmap_canvas {
@@ -365,6 +367,12 @@ section h1 span{
     #header-links {
         width: 50%;
     }
+    section {
+        background-position-x: -120px;
+    }
+    .main-page h1 {
+        font-size: 15px;
+    }
 
     /* services */
     .box {
@@ -385,12 +393,11 @@ section h1 span{
         max-height: 85%;
         object-fit: contain;
     }
-    section {
-        background-position-x: -120px;
+    /* contact */
+    .up-arrow, .down-arrow {
+        display: none;
     }
-    .main-page h1 {
-        font-size: 15px;
-    }
+    
 }
 
 
@@ -465,18 +472,18 @@ section h1 span{
     }
 
     #contact-motto h1 {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     #contact-details {
         margin-bottom: 20px;
     }
     
-    #contactForm {
+    #contactForm, #contact-details {
         width: 100%;
     }
 
     .mapouter {
-        width: 94%;
+        width: calc(100% - 20px);
     }
 }
