@@ -208,7 +208,7 @@ section h1 span{
 
 #contact-logos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
 
@@ -218,6 +218,8 @@ section h1 span{
     width: 30px;
     border-radius: 50%;
     transition-duration: 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .logo:hover {
