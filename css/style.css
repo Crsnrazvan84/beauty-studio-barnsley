@@ -112,6 +112,22 @@ section h1 span{
 }
 
 /* SERVICES-PAGE */
+.service-type {
+    background-color: rgba(255, 223, 223, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    color: #e8491d;
+    text-align: center;
+    text-shadow: 2px 2px 2px #35424A;
+    cursor: default;
+}
+
+.service-type h1 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
 #services-page {
     flex-direction: column;
 }
@@ -138,13 +154,15 @@ section h1 span{
 }
 
 .box-item img {
-    width: 90%;
+    max-width: 90%;
+    max-height: 60%;
     border-radius: 5px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
 }
 
 .box-item h2 {
     cursor: default;
+    text-align: center;
 }
 
 .price {
