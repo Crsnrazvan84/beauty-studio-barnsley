@@ -4,6 +4,8 @@ const burger2 = document.querySelector('.line2');
 const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('#header-links li');
+
+var wellness = document.getElementById('wellness');
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
 const upArrow = document.querySelector('.up-arrow');
@@ -26,6 +28,23 @@ function initMenu(loadPage) {
             $('#' + page + '-link').addClass('current');
         };
     }
+}
+
+function initServices (){
+    let subMenuLinks = document.querySelectorAll('.dropdown');
+    for(var i = 0 ; i < subMenuLinks.length ; i++){
+        subMenuLinks[i].onclick = function () {
+            // let serviceName = this.getAttribute("data-page");
+           
+            $('.page').hide();
+            $('#services-page').fadeIn();
+            // wellness.scrollIntoView();
+
+
+
+        }
+    }
+
 }
 
 const navSlide = () => {
@@ -83,5 +102,6 @@ upArrow.addEventListener('click', scrollUp);
 
 $('.page').hide();
 initMenu('home');
+initServices();
 navSlide();
 navClose();
