@@ -5,7 +5,6 @@ const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('#header-links li');
 
-var wellness = document.getElementById('wellness');
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
 const upArrow = document.querySelector('.up-arrow');
@@ -30,18 +29,34 @@ function initMenu(loadPage) {
     }
 }
 
-function initServices (){
+function initServices() {
     let subMenuLinks = document.querySelectorAll('.dropdown');
-    for(var i = 0 ; i < subMenuLinks.length ; i++){
+
+    for (var i = 0; i < subMenuLinks.length; i++) {
         subMenuLinks[i].onclick = function () {
-            // let serviceName = this.getAttribute("data-page");
-           
-            $('.page').hide();
-            $('#services-page').fadeIn();
-            // wellness.scrollIntoView();
+            let serviceName = this.getAttribute("data-page");
+            function checkPage() {
+                if ($("#services-page").is(":hidden")) {
+                    $('.page').hide();
+                    $('.menuButtons').removeClass('current');
+                    $('#services-page').fadeIn();
+                    $('#services-link').addClass('current');
+                }
+            }
+
+            $.when(checkPage()).then(function () {
+                let item = document.getElementById(serviceName);
+                item.scrollIntoView();
+                // var headerOffset = 90;
+                // var elementPosition = item.getBoundingClientRect().top;
+                // var offsetPosition = elementPosition - headerOffset;
+
+                // window.scrollTo({
+                //     top: offsetPosition
+                // });
 
 
-
+            });
         }
     }
 
@@ -87,8 +102,8 @@ function navClose() {
     });
 }
 
-function scrollDown () {
-    mapouter.scrollIntoView(); 
+function scrollDown() {
+    mapouter.scrollIntoView();
 }
 
 function scrollUp() {
