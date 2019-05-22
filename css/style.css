@@ -40,6 +40,11 @@ header img {
     cursor: default;
 }
 
+li {
+    display: block;
+    transition-duration: 0.5s;
+}
+
 #header-links {
     display: flex;
     justify-content: space-around;
@@ -54,6 +59,47 @@ header img {
 
 #header-links a:hover {
     color: #aaa;
+}
+
+#header-links li {
+    position: relative;
+}
+
+#header-links li ul {
+    width: 150px;
+    background-color: #35424a;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    left:-30px;
+    display: none;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#header-links li ul li:first-child {
+    padding-top: 50px;
+}
+
+#header-links li ul li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+   
+
+}
+#header-links li:hover > ul,
+#header-links li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#header-links li ul li {
+    clear: both;
+    width: 100%;
 }
 
 .current {
