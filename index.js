@@ -47,7 +47,7 @@ function initServices() {
             $.when(checkPage()).then(function () {
                 const headerHeight = $(window).height() * 0.055;
                 const topOfElement = document.querySelector("#" + serviceName).offsetTop - headerHeight;
-                window.scroll({ top: topOfElement });
+                window.scroll({ top: topOfElement, behavior: "smooth"});
             });
         }
     }
@@ -94,17 +94,14 @@ function navClose() {
     });
 }
 
-function scrollDown() {
-    mapouter.scrollIntoView();
-}
+// scroll contact page
+downArrow.addEventListener('click', function(){
+    mapouter.scrollIntoView({behavior: "smooth"});
+});
 
-function scrollUp() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-downArrow.addEventListener('click', scrollDown);
-upArrow.addEventListener('click', scrollUp);
+upArrow.addEventListener('click', function(){
+    window.scroll({ top: 0, behavior: "smooth"});
+});
 
 
 $('.page').hide();
