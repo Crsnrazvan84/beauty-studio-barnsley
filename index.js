@@ -22,6 +22,7 @@ function initMenu(loadPage) {
 
             $('.page').hide();
             $('.menuButtons').removeClass('current');
+            $("html").css("scroll-behavior", "auto");
             const page = this.getAttribute("data-page");
             $('#' + page + '-page').fadeIn();
             $('#' + page + '-link').addClass('current');
@@ -45,10 +46,12 @@ function initServices() {
             }
 
             $.when(checkPage()).then(function () {
-                const headerHeight = $(window).height() * 0.055;
-                const topOfElement = document.querySelector("#" + serviceName).offsetTop - headerHeight;
-                window.scroll({ top: topOfElement, behavior: "smooth"});
+                const headerHeight = $(window).height() * 0.12;
+                const topOfElement = $("#" + serviceName).offset().top - headerHeight;
+                $("html").css("scroll-behavior", "smooth");
+                window.scrollTo(0, topOfElement);
             });
+            
         }
     }
 
