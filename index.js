@@ -15,14 +15,14 @@ function initMenu(loadPage) {
     $('#' + loadPage + '-page').show();
     $('#' + loadPage + '-link').addClass('current');
 
-    var links = document.querySelectorAll("#header-links a");
+    const links = document.querySelectorAll("#header-links a");
 
-    for (var i = 0; i < links.length; i++) {
+    for (let i = 0; i < links.length; i++) {
         links[i].onclick = function () {
 
             $('.page').hide();
             $('.menuButtons').removeClass('current');
-            var page = this.getAttribute("data-page");
+            const page = this.getAttribute("data-page");
             $('#' + page + '-page').fadeIn();
             $('#' + page + '-link').addClass('current');
         };
@@ -32,9 +32,9 @@ function initMenu(loadPage) {
 function initServices() {
     let subMenuLinks = document.querySelectorAll('.dropdown');
 
-    for (var i = 0; i < subMenuLinks.length; i++) {
+    for (let i = 0; i < subMenuLinks.length; i++) {
         subMenuLinks[i].onclick = function () {
-            let serviceName = this.getAttribute("data-page");
+            const serviceName = this.getAttribute("data-page");
             function checkPage() {
                 if ($("#services-page").is(":hidden")) {
                     $('.page').hide();
@@ -45,17 +45,9 @@ function initServices() {
             }
 
             $.when(checkPage()).then(function () {
-                let item = document.getElementById(serviceName);
-                item.scrollIntoView();
-                // var headerOffset = 90;
-                // var elementPosition = item.getBoundingClientRect().top;
-                // var offsetPosition = elementPosition - headerOffset;
-
-                // window.scrollTo({
-                //     top: offsetPosition
-                // });
-
-
+                const headerHeight = $(window).height() * 0.055;
+                const topOfElement = document.querySelector("#" + serviceName).offsetTop - headerHeight;
+                window.scroll({ top: topOfElement });
             });
         }
     }
