@@ -4,6 +4,7 @@ const burger2 = document.querySelector('.line2');
 const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('.menu-buttons');
+const links = document.querySelectorAll(".menuButtons");
 
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
@@ -14,8 +15,6 @@ const mapouter = document.querySelector('.mapouter');
 function initMenu(loadPage) {
     $('#' + loadPage + '-page').show();
     $('#' + loadPage + '-link').addClass('current');
-
-    const links = document.querySelectorAll(".menuButtons");
 
     for (let i = 0; i < links.length; i++) {
         links[i].onclick = function () {
@@ -45,8 +44,8 @@ function initServices() {
                 }
             }
 
-            $.when(checkPage()).then(function () {
-                const headerHeight = $(window).height() * 0.12;
+            $.when(checkPage()).then( () => {
+                const headerHeight = $(window).height() * 0.15;
                 const topOfElement = $("#" + serviceName).offset().top - headerHeight;
                 $("html").css("scroll-behavior", "smooth");
                 window.scrollTo(0, topOfElement);
@@ -84,7 +83,7 @@ const navSlide = () => {
 }
 
 function navClose() {
-    window.addEventListener('mouseup', function (event) {
+    window.addEventListener('mouseup', (event) => {
         if ((nav.classList.contains('nav-active')) && (event.target != nav) && (event.target != burger1 && event.target != burger2 && event.target != burger3)) {
             nav.style.animation = `navSlideOut 0.5s`;
             nav.classList.remove('nav-active');
@@ -97,14 +96,10 @@ function navClose() {
     });
 }
 
+// scroll services page
+downArrow.addEventListener('click', () => mapouter.scrollIntoView({behavior: "smooth"}));
 // scroll contact page
-downArrow.addEventListener('click', function(){
-    mapouter.scrollIntoView({behavior: "smooth"});
-});
-
-upArrow.addEventListener('click', function(){
-    window.scroll({ top: 0, behavior: "smooth"});
-});
+upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth"}));
 
 
 $('.page').hide();
