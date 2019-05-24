@@ -112,6 +112,7 @@ for (let i = 0; i < img.length; i++) {
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
+        $('body').css('overflow', 'hidden');
     }
 }
 
@@ -119,6 +120,7 @@ var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
     modal.style.display = "none";
+    $('body').css('overflow', 'auto');
 }
 
 
