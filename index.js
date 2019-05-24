@@ -3,7 +3,7 @@ const burger1 = document.querySelector('.line1');
 const burger2 = document.querySelector('.line2');
 const burger3 = document.querySelector('.line3');
 const nav = document.querySelector('#header-links');
-const navLinks = document.querySelectorAll('#header-links li');
+const navLinks = document.querySelectorAll('.menu-buttons');
 
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
@@ -15,7 +15,7 @@ function initMenu(loadPage) {
     $('#' + loadPage + '-page').show();
     $('#' + loadPage + '-link').addClass('current');
 
-    const links = document.querySelectorAll("#header-links a");
+    const links = document.querySelectorAll(".menuButtons");
 
     for (let i = 0; i < links.length; i++) {
         links[i].onclick = function () {
