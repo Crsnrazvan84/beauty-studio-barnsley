@@ -6,6 +6,11 @@ const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('.menu-buttons');
 const links = document.querySelectorAll(".menuButtons");
 
+const modal = document.getElementById("myModal");
+const img = document.querySelectorAll(".box-item img");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
 const upArrow = document.querySelector('.up-arrow');
@@ -101,25 +106,19 @@ downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "s
 // scroll contact page
 upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+// Services modal image
+for (let i = 0; i < img.length; i++) {
+    img[i].onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
 }
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 
