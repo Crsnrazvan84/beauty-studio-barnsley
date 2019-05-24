@@ -1,3 +1,5 @@
+const body = document.getElementsByTagName('body')[0];
+
 const burger = document.querySelector('.burger');
 const burger1 = document.querySelector('.line1');
 const burger2 = document.querySelector('.line2');
@@ -112,15 +114,15 @@ for (let i = 0; i < img.length; i++) {
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
-        $('body').css('overflow', 'hidden');
+        body.style.overflow = 'hidden';
     }
 }
 
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
-    modal.style.display = "none";
-    $('body').css('overflow', 'auto');
+    modal.style.display = 'none';
+    body.style.overflow = 'auto';
 }
 
 
