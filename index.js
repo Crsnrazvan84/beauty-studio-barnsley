@@ -29,33 +29,6 @@ function initMenu(loadPage) {
     }
 }
 
-function initServices() {
-    let subMenuLinks = document.querySelectorAll('.dropdown');
-
-    for (let i = 0; i < subMenuLinks.length; i++) {
-        subMenuLinks[i].onclick = function () {
-            const serviceName = this.getAttribute("data-page");
-            function checkPage() {
-                if ($("#services-page").is(":hidden")) {
-                    $('.page').hide();
-                    $('.menuButtons').removeClass('current');
-                    $('#services-page').fadeIn();
-                    $('#services-link').addClass('current');
-                }
-            }
-
-            $.when(checkPage()).then( () => {
-                const headerHeight = $(window).height() * 0.15;
-                const topOfElement = $("#" + serviceName).offset().top - headerHeight;
-                $("html").css("scroll-behavior", "smooth");
-                window.scrollTo(0, topOfElement);
-            });
-            
-        }
-    }
-
-}
-
 const navSlide = () => {
     burger.addEventListener('click', () => {
         // toggle nav
@@ -96,10 +69,58 @@ function navClose() {
     });
 }
 
+function initServices() {
+    let subMenuLinks = document.querySelectorAll('.dropdown');
+
+    for (let i = 0; i < subMenuLinks.length; i++) {
+        subMenuLinks[i].onclick = function () {
+            const serviceName = this.getAttribute("data-page");
+            function checkPage() {
+                if ($("#services-page").is(":hidden")) {
+                    $('.page').hide();
+                    $('.menuButtons').removeClass('current');
+                    $('#services-page').fadeIn();
+                    $('#services-link').addClass('current');
+                }
+            }
+
+            $.when(checkPage()).then(() => {
+                const headerHeight = $(window).height() * 0.15;
+                const topOfElement = $("#" + serviceName).offset().top - headerHeight;
+                $("html").css("scroll-behavior", "smooth");
+                window.scrollTo(0, topOfElement);
+            });
+
+        }
+    }
+
+}
+
 // scroll services page
-downArrow.addEventListener('click', () => mapouter.scrollIntoView({behavior: "smooth"}));
+downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "smooth" }));
 // scroll contact page
-upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth"}));
+upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
 
 
 $('.page').hide();
