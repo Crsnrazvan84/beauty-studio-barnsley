@@ -8,9 +8,6 @@ const nav = document.querySelector('#header-links');
 const navLinks = document.querySelectorAll('.menu-buttons');
 const links = document.querySelectorAll(".menuButtons");
 
-const section = document.querySelectorAll('section');
-console.log('section: ' + section);
-
 const modal = document.getElementById("myModal");
 const img = document.querySelectorAll(".box-item img");
 const modalImg = document.getElementById("img01");
@@ -28,10 +25,6 @@ function initMenu(loadPage) {
 
     for (let i = 0; i < links.length; i++) {
         links[i].onclick = function () {
-
-            // if($("#home-page").is(":hidden")){
-            //     section.style.backgroundPositionY = "335px";
-            // }
 
             $('.page').hide();
             $('.menuButtons').removeClass('current');

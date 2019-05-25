@@ -126,11 +126,8 @@ section {
     justify-content: center;
     align-items: center;
     background-image: url(../img/relax-1183533_1920.jpg);
+    background-position: center bottom;
     background-size: cover;
-}
-
-#home-page {
-    background-position-y: -335px;
 }
 
 .main-page {
@@ -239,6 +236,7 @@ section h1 span {
 }
 
 /* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -271,6 +269,7 @@ section h1 span {
 }
 
 /* Modal Animation */
+
 .modal-content, #caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -297,6 +296,7 @@ section h1 span {
 }
 
 /* Modal Close Button */
+
 .close {
     position: absolute;
     top: 15px;
@@ -306,9 +306,8 @@ section h1 span {
     font-weight: bold;
     transition: 0.3s;
 }
-  
-  .close:hover,
-  .close:focus {
+
+.close:hover, .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -553,8 +552,14 @@ section h1 span {
     #header-links {
         width: 50%;
     }
+    /* background */
     section {
-        background-position-x: -120px;
+        background: url(../img/relax-1183533.jpg);
+        background-size: cover;
+    }
+    
+    #contact-page {
+        background-position-x: -80px;
     }
     .main-page h1 {
         font-size: 15px;
