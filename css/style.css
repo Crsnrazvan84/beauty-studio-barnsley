@@ -45,6 +45,10 @@ li {
     transition-duration: 0.5s;
 }
 
+a {
+    text-decoration: none;
+}
+
 #header-links {
     display: flex;
     justify-content: space-around;
@@ -116,8 +120,6 @@ li {
     margin: 3px;
 }
 
-/*  HOME-PAGE */
-
 section {
     position: relative;
     margin-top: 10vh;
@@ -131,20 +133,29 @@ section {
     background-size: cover;
 }
 
+/*  HOME-PAGE */
+#home-page{
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 100px
+}
+
 .main-page {
     display: flex;
-    flex-direction: column;
     width: 65%;
     align-items: center;
     color: #35424a;
     background-color: rgba(255, 223, 223, 0.7);
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    position: relative;
 }
 
 .main-page h1, #contact-motto h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     text-shadow: 1px 1px 2px #CE5937;
     font-family: 'Lobster Two', cursive;
     cursor: default;
@@ -156,6 +167,48 @@ section h1 span {
     font-weight: 800;
     cursor: default;
     text-shadow: 1px 1px 2px #35424a;
+}
+
+.testimonials-section {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-right: 40px;
+}
+
+.testimonial {
+    display: flex;
+    width: 45%;
+   
+    background-color: rgba(255, 223, 223, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 1px 1px 2px #CE5937;
+    font-size: 1.2rem;
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+}
+
+.testimonial a {
+    color: #35424a;
+}
+
+.testimonial a:hover {
+    opacity: 0.9;
+}
+
+.testimonial p {
+    font-family: 'Pacifico', cursive;
+    text-align: justify;
+}
+
+.testimonial p img {
+    max-width: 100px;
+    margin-right: 8px;
+    margin-top: 10px;
+    border-radius: 50%;
+    float: left;
 }
 
 /* SERVICES-PAGE */
