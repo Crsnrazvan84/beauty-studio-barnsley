@@ -180,7 +180,6 @@ section h1 span {
 .testimonial {
     display: flex;
     width: 45%;
-   
     background-color: rgba(255, 223, 223, 0.7);
     border-radius: 10px;
     padding: 10px;
@@ -612,11 +611,30 @@ section h1 span {
     /* background */
     #home-page {
         background-position:left bottom;
+        padding-bottom: 20px;
+        max-height: 90vh;
     }
     
     .main-page h1 {
         font-size: 15px;
     }
+
+    .testimonials-section {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .testimonial {
+        display: flex;
+        width: 80%;
+        font-size: 1rem;
+        margin-bottom: 10px;
+     
+    }
+
     /* services */
     .box {
         flex-direction: column;
@@ -651,10 +669,8 @@ section h1 span {
         font-size: 15px;
     }
     .main-page {
-        width: 100%;
+        width: 80%;
         margin: 10px;
-        position: relative;
-        bottom: 15vh;
     }
     .navBar-open {
         overflow: hidden;
