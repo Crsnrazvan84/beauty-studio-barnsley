@@ -127,7 +127,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fc5296;
     background-image:url(../img/wellness-1382476_1920.jpg), linear-gradient(315deg, #fc5296 0%, #f67062 74%)  ;
     background-position: center bottom;
     background-size: cover;
@@ -143,14 +142,14 @@ section {
 
 .main-page {
     display: flex;
+    position: relative;
     width: 65%;
     align-items: center;
     color: #35424a;
-    background-color: rgba(255, 223, 223, 0.7);
     border-radius: 10px;
     padding: 20px;
+    background-color: rgba(218, 146, 146, 0.3);
     box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
-    position: relative;
 }
 
 .main-page h1, #contact-motto h1 {
@@ -179,13 +178,14 @@ section h1 span {
 
 .testimonial {
     display: flex;
+    position: relative;
     width: 45%;
-    background-color: rgba(255, 223, 223, 0.7);
     border-radius: 10px;
     padding: 10px;
     font-family: 'Pacifico', cursive;
     text-shadow: 1px 1px 2px #CE5937;
     font-size: 1.2rem;
+    background-color: rgba(218, 146, 146, 0.5);
     box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
@@ -203,17 +203,16 @@ section h1 span {
 }
 
 .testimonial p img {
+    float: left;
     max-width: 100px;
     margin-right: 8px;
     margin-top: 10px;
     border-radius: 50%;
-    float: left;
 }
 
 /* SERVICES-PAGE */
 
 .service-type {
-    background-color: rgba(255, 223, 223, 0.6);
     padding: 20px;
     margin: 20px auto 0;
     color: #e8491d;
@@ -221,6 +220,8 @@ section h1 span {
     text-shadow: 2px 2px 2px #35424A;
     cursor: default;
     width: 100%;
+    background-color: rgba(218, 146, 146, 0.3);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
 .service-type h1 {
@@ -250,20 +251,22 @@ section h1 span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 470px;
     padding: 20px;
     margin: auto 20px;
     border-radius: 5px;
     color: #35424a;
-    background-color: rgba(255, 223, 223, 0.6);
-    align-items: center;
+    background-color: rgba(218, 146, 146, 0.3);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+  
 }
 
 .box-item img {
     max-width: 100%;
     max-height: 75%;
     border-radius: 5px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5); */
     cursor: pointer;
 }
 
@@ -374,12 +377,13 @@ section h1 span {
 }
 
 #contact-motto {
-    background-color: rgba(255, 223, 223, 0.6);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
-    color: #35424a;
     text-align: center;
+    color: #35424a;
+    background-color: rgba(218, 146, 146, 0.3);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
 #contact-motto h1 span {
@@ -400,10 +404,11 @@ section h1 span {
 }
 
 #contact-details {
-    background-color: rgba(255, 235, 235, 0.6);
     border-radius: 7px;
     padding: 15px;
     color: #35424a;
+    background-color: rgba(218, 146, 146, 0.4);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
 #contact-details h4 {
@@ -453,9 +458,10 @@ section h1 span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(255, 235, 235, 0.6);
     border-radius: 7px;
     padding: 15px;
+    background-color: rgba(218, 146, 146, 0.4);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
 #contactForm h2 {
@@ -531,6 +537,7 @@ section h1 span {
 
 .mapouter {
     background-color: rgba(255, 223, 223, 0.6);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
     border-radius: 5px;
     position: relative;
     width: 80%;
