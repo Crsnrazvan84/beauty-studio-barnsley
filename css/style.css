@@ -125,7 +125,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/relax-1183533_1920.jpg);
+    background-color: #fc5296;
+    background-image:url(../img/wellness-1382476_1920.jpg), linear-gradient(315deg, #fc5296 0%, #f67062 74%)  ;
     background-position: center bottom;
     background-size: cover;
 }
@@ -144,21 +145,23 @@ section {
 .main-page h1, #contact-motto h1 {
     text-align: center;
     font-size: 40px;
-    font-family: 'Tangerine', cursive;
+    text-shadow: 1px 1px 2px #CE5937;
+    font-family: 'Lobster Two', cursive;
     cursor: default;
 }
 
 section h1 span {
     color: #e8491d;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Lobster Two', cursive;
     font-weight: 800;
     cursor: default;
+    text-shadow: 1px 1px 2px #35424a;
 }
 
 /* SERVICES-PAGE */
 
 .service-type {
-    background-color: rgba(255, 223, 223, 0.7);
+    background-color: rgba(255, 223, 223, 0.6);
     padding: 20px;
     margin: 20px auto 0;
     color: #e8491d;
@@ -200,7 +203,7 @@ section h1 span {
     margin: auto 20px;
     border-radius: 5px;
     color: #35424a;
-    background-color: rgba(255, 223, 223, 0.7);
+    background-color: rgba(255, 223, 223, 0.6);
     align-items: center;
 }
 
@@ -296,7 +299,6 @@ section h1 span {
 }
 
 /* Modal Close Button */
-
 .close {
     position: absolute;
     top: 15px;
@@ -320,7 +322,7 @@ section h1 span {
 }
 
 #contact-motto {
-    background-color: rgba(255, 223, 223, 0.7);
+    background-color: rgba(255, 223, 223, 0.6);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -332,6 +334,7 @@ section h1 span {
     color: #e8491d;
     font-weight: 800;
     cursor: default;
+    text-shadow: 1px 1px 2px #35424a;
 }
 
 .container {
@@ -345,7 +348,7 @@ section h1 span {
 }
 
 #contact-details {
-    background-color: rgba(255, 235, 235, 0.5);
+    background-color: rgba(255, 235, 235, 0.6);
     border-radius: 7px;
     padding: 15px;
     color: #35424a;
@@ -398,13 +401,14 @@ section h1 span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(255, 235, 235, 0.5);
+    background-color: rgba(255, 235, 235, 0.6);
     border-radius: 7px;
     padding: 15px;
 }
 
 #contactForm h2 {
     color: #35424a;
+    text-shadow: 1px 1px 2px #35424a;
     text-align: center;
     cursor: default;
     margin-bottom: 20px;
@@ -474,7 +478,7 @@ section h1 span {
 }
 
 .mapouter {
-    background-color: rgba(255, 223, 223, 0.7);
+    background-color: rgba(255, 223, 223, 0.6);
     border-radius: 5px;
     position: relative;
     width: 80%;
@@ -553,14 +557,10 @@ section h1 span {
         width: 50%;
     }
     /* background */
-    section {
-        background: url(../img/relax-1183533.jpg);
-        background-size: cover;
+    #home-page {
+        background-position:left bottom;
     }
     
-    #contact-page {
-        background-position-x: -80px;
-    }
     .main-page h1 {
         font-size: 15px;
     }

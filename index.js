@@ -94,7 +94,7 @@ function initServices() {
             $.when(checkPage()).then(() => {
                 const headerHeight = $(window).height() * 0.15;
                 const topOfElement = $("#" + serviceName).offset().top - headerHeight;
-                $("html").css("scroll-behavior", "smooth");
+                $("html").css("scroll-behavior", "smooth");           
                 window.scrollTo(0, topOfElement);
             });
 
@@ -103,9 +103,9 @@ function initServices() {
 
 }
 
-// scroll services page
+// scroll down contact page
 downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "smooth" }));
-// scroll contact page
+// scroll up contact page
 upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
 
 // Services modal image
