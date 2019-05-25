@@ -178,19 +178,20 @@ section h1 span {
 
 .testimonial {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 45%;
     border-radius: 10px;
     padding: 10px;
-    font-family: 'Pacifico', cursive;
-    text-shadow: 1px 1px 2px #CE5937;
     font-size: 1.2rem;
     background-color: rgba(218, 146, 146, 0.5);
     box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
 }
 
-.testimonial a {
+.testimonial a p{
     color: #35424a;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 1px 1px 2px #CE5937;
 }
 
 .testimonial a:hover {
@@ -618,12 +619,13 @@ section h1 span {
     /* background */
     #home-page {
         background-position:left bottom;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 30px;
         max-height: 90vh;
     }
     
     .main-page h1 {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .testimonials-section {
@@ -637,9 +639,15 @@ section h1 span {
     .testimonial {
         display: flex;
         width: 80%;
-        font-size: 1rem;
+        font-size: 15px;
+        line-height: 1.2;
         margin-bottom: 10px;
-     
+    }
+
+    .testimonial p img {
+        width: 50px;
+        margin-top: 3px;
+        margin-bottom: 0px;
     }
 
     /* services */
