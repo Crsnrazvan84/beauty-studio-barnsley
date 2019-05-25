@@ -404,6 +404,12 @@ section h1 span {
     align-items: center;
 }
 
+.container:last-of-type {
+    min-height: calc(100vh - 10vh);
+    justify-content: center;
+    padding-bottom:0;
+}
+
 #contact-details {
     border-radius: 7px;
     padding: 15px;
@@ -536,16 +542,23 @@ section h1 span {
     background-color: #35424a;
 }
 
+.contact-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .mapouter {
     background-color: rgba(255, 223, 223, 0.6);
     box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
     border-radius: 5px;
     position: relative;
-    width: 80%;
+    width: 50%;
     height: 78vh;
     margin-bottom: 40px;
     margin-right: 20px;
     margin-left: 20px;
+    margin-top: 35px
 }
 
 .gmap_canvas {
@@ -555,6 +568,12 @@ section h1 span {
     background: none !important;
     height: 100%;
     width: 100%;
+}
+
+#neli {
+    max-height: 78vh;
+    max-width: 100%;
+    border-radius: 5px;
 }
 
 /* NAVBAR & BURGER */
@@ -739,6 +758,12 @@ section h1 span {
     }
     #contactForm, #contact-details {
         width: 100%;
+    }
+    .contact-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
     }
     .mapouter {
         width: calc(100% - 20px);
