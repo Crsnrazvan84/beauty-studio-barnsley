@@ -125,9 +125,12 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/main-wallpaper.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../img/relax-1183533_1920.jpg);
     background-size: cover;
+}
+
+#home-page {
+    background-position-y: -335px;
 }
 
 .main-page {
@@ -210,6 +213,10 @@ section h1 span {
     border-radius: 5px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+.box-item img:hover {
+    opacity: 0.9;
 }
 
 .box-item h2 {
