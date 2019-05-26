@@ -690,8 +690,38 @@ section h1 span {
         width: 100%;
     }
     /* contact */
+    #contact-motto {
+        margin: 20px;
+        margin-bottom: 0px;
+    }
+    #contact-motto h1 {
+        font-size: 25px;
+    }
+    #contact-details {
+        margin-bottom: 20px;
+    }
+    #contactForm, #contact-details {
+        width: 100%;
+    }
+    .contact-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mapouter {
+        width: calc(100% - 10px);
+        margin: auto;
+    }
+    .container:last-of-type {
+        padding: 0 auto;
+    }
+   
     .up-arrow, .down-arrow {
         display: none;
+    }
+
+    #neli {
+       margin: 20px auto;
     }
 }
 
@@ -744,28 +774,5 @@ section h1 span {
     .container {
         flex-direction: column;
         padding: 20px 10px;
-    }
-    /* contact */
-    #contact-motto {
-        margin: 20px;
-        margin-bottom: 0px;
-    }
-    #contact-motto h1 {
-        font-size: 25px;
-    }
-    #contact-details {
-        margin-bottom: 20px;
-    }
-    #contactForm, #contact-details {
-        width: 100%;
-    }
-    .contact-bottom {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-       
-    }
-    .mapouter {
-        width: calc(100% - 20px);
-    }
+    }    
 }
