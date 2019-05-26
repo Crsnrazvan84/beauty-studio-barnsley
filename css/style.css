@@ -574,6 +574,7 @@ section h1 span {
     max-height: 78vh;
     max-width: 100%;
     border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* NAVBAR & BURGER */
@@ -721,6 +722,7 @@ section h1 span {
     }
 
     #neli {
+        max-height: 90vh;
        margin: 20px auto;
     }
 }
