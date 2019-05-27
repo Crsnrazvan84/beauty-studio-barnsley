@@ -111,7 +111,8 @@ upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smoot
 // Services modal image
 for (let i = 0; i < img.length; i++) {
     img[i].onclick = function () {
-        modal.style.display = "block";
+        // modal.style.display = "block";
+        modal.classList.add('show-modal');
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
         body.style.overflow = 'hidden';
@@ -121,7 +122,7 @@ for (let i = 0; i < img.length; i++) {
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function () {
-    modal.style.display = 'none';
+    modal.classList.remove('show-modal');
     body.style.overflow = 'auto';
 }
 
