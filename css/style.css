@@ -297,7 +297,6 @@ section h1 span {
 
 .modal {
     display: none;
-    
     position: fixed;
     z-index: 1;
     padding-top:10px;
@@ -331,7 +330,6 @@ section h1 span {
     max-width: 700px;
     text-align: center;
     color: #ccc;
-    padding: 10px 0 0;
 }
 
 /* Modal Animation */
@@ -692,11 +690,7 @@ section h1 span {
         width: 90%;
         margin-top: 25px;
     }
-    .box-item img {
-        /* width: 100%; */
-        /* max-height: 85%; */
-        /* object-fit: contain; */
-    }
+    
     .modal-content {
         width: 100%;
     }
@@ -709,10 +703,11 @@ section h1 span {
         font-size: 25px;
     }
     #contact-details {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
     #contactForm, #contact-details {
         width: 100%;
+        margin: 20px auto;
     }
     .contact-bottom {
         flex-direction: column;
@@ -721,12 +716,14 @@ section h1 span {
     }
     .mapouter {
         width: calc(100% - 10px);
-        margin: auto;
+        margin:10px auto;
+    }
+    .container {
+        width: 95%;
     }
     .container:last-of-type {
-        padding: 0 auto;
+        padding: 0;
     }
-   
     .up-arrow, .down-arrow {
         display: none;
     }
