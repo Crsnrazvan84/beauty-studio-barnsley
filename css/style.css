@@ -127,7 +127,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(../img/wellness-1382476_1920.jpg), linear-gradient(315deg, #fc5296 0%, #f67062 74%)  ;
+    background-image:url(../img/wellness-1382476_1920.jpg), linear-gradient(315deg, #f5d6e2 0%, #f8abc9 74%)  ;
     background-position: center bottom;
     background-size: cover;
 }
@@ -406,7 +406,7 @@ section h1 span {
 
 .container:last-of-type {
     min-height: calc(100vh - 10vh);
-    justify-content: center;
+    justify-content: space-around;
     padding-bottom:0;
 }
 
@@ -515,6 +515,7 @@ section h1 span {
     position: relative;
     bottom: 0;
     width: 75px;
+    opacity: 0.8;
     cursor: pointer;
     transition: bottom ease 0.5s;
 }
@@ -528,9 +529,11 @@ section h1 span {
     bottom: 20px;
     right: 20px;
     width: 75px;
+    opacity: 0.8;
     cursor: pointer;
     transition: bottom ease 0.5s;
     transform: rotate(180deg);
+ 
 }
 
 .up-arrow:hover {
@@ -553,7 +556,7 @@ section h1 span {
     box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
     border-radius: 5px;
     position: relative;
-    width: 50%;
+    width: 60%;
     height: 78vh;
     margin-bottom: 40px;
     margin-right: 20px;
