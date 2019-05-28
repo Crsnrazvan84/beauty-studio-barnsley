@@ -12,6 +12,7 @@ const modal = document.getElementById("myModal");
 const img = document.querySelectorAll(".box-item img");
 const modalImg = document.getElementById("img01");
 const captionText = document.getElementById("caption");
+const servicesUpArrow = document.querySelector('#services-up-arrow')
 
 const contactMotto = document.querySelector('#contact-motto');
 const downArrow = document.querySelector('.down-arrow');
@@ -19,6 +20,7 @@ const upArrow = document.querySelector('.up-arrow');
 const mapouter = document.querySelector('.mapouter');
 
 
+// MENU
 function initMenu(loadPage) {
     $('#' + loadPage + '-page').show();
     $('#' + loadPage + '-link').addClass('current');
@@ -76,6 +78,8 @@ function navClose() {
     });
 }
 
+
+// SERVICES PAGE
 function initServices() {
     let subMenuLinks = document.querySelectorAll('.dropdown');
 
@@ -94,7 +98,7 @@ function initServices() {
             $.when(checkPage()).then(() => {
                 const headerHeight = $(window).height() * 0.15;
                 const topOfElement = $("#" + serviceName).offset().top - headerHeight;
-                $("html").css("scroll-behavior", "smooth");           
+                $("html").css("scroll-behavior", "smooth");
                 window.scrollTo(0, topOfElement);
             });
 
@@ -103,12 +107,7 @@ function initServices() {
 
 }
 
-// scroll down contact page
-downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "smooth" }));
-// scroll up contact page
-upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
-
-// Services modal image
+// Services modal
 for (let i = 0; i < img.length; i++) {
     img[i].onclick = function () {
         // modal.style.display = "block";
@@ -125,6 +124,26 @@ span.onclick = function () {
     modal.classList.remove('show-modal');
     body.style.overflow = 'auto';
 }
+
+// Services scroll up arrow
+function scrollServicesPage() {
+    const y = window.scrollY;
+    if (y >= 800) {
+        servicesUpArrow.style.display = "block";
+    } else {
+        servicesUpArrow.style.display = "none";
+    }
+};
+
+window.addEventListener("scroll", scrollServicesPage);
+
+// CONTACT PAGE
+// scroll down contact page
+downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "smooth" }));
+// scroll up contact page
+upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
+
+
 
 
 $('.page').hide();
