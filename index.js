@@ -15,8 +15,8 @@ const captionText = document.getElementById("caption");
 const servicesUpArrow = document.querySelector('#services-up-arrow')
 
 const contactMotto = document.querySelector('#contact-motto');
-const downArrow = document.querySelector('.down-arrow');
-const upArrow = document.querySelector('.up-arrow');
+const downArrow = document.querySelectorAll('.down-arrow');
+const upArrow = document.querySelectorAll('.up-arrow');
 const mapouter = document.querySelector('.mapouter');
 
 
@@ -126,22 +126,23 @@ span.onclick = function () {
 }
 
 // Services scroll up arrow
-function scrollServicesPage() {
+function showArrow() {
     const y = window.scrollY;
-    if (y >= 800) {
+    if (y >= 300) {
         servicesUpArrow.style.display = "block";
     } else {
         servicesUpArrow.style.display = "none";
     }
 };
+window.addEventListener("scroll", showArrow);
 
-window.addEventListener("scroll", scrollServicesPage);
+// scroll up page
+upArrow.forEach((arrow) => arrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" })));
+// scroll down page
+downArrow.forEach((arrow) => arrow.addEventListener('click', () => window.scroll({ top: document.body.scrollHeight, behavior: "smooth" })));
 
-// CONTACT PAGE
-// scroll down contact page
-downArrow.addEventListener('click', () => mapouter.scrollIntoView({ behavior: "smooth" }));
-// scroll up contact page
-upArrow.addEventListener('click', () => window.scroll({ top: 0, behavior: "smooth" }));
+
+
 
 
 
