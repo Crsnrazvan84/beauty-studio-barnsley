@@ -741,6 +741,7 @@ section h1 span {
         padding: 0;
     }
     .up-arrow, .down-arrow {
+        width: 35px;
         display: none;
     }
 
