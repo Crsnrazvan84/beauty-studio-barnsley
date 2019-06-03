@@ -3,7 +3,7 @@ Beauty Studio website
 
 ## Live preview
 
-Open [Live demo](https://crsnrazvan84.github.io/beauty-studio-barnsley/)
+Open [Live demo](https://razvanwebdeveloper.github.io/beauty-studio-barnsley/)
 
 ## Structure
 
