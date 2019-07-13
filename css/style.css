@@ -127,7 +127,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(135deg, rgba(245, 214, 226, 0.1) 0%, rgba(248, 171, 201, 0.5) 74%), url(../img/wellness-1382476_1920.jpg) ;
+    background-image: linear-gradient(135deg, rgba(243, 234, 238, 0.1) 0%, rgba(248, 171, 201, 0.5) 74%), url(../img/wellness-1382476_1920.jpg) ;
     background-position: left bottom;
     background-size: cover;
 }
