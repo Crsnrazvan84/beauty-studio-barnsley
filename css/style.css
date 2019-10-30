@@ -148,8 +148,8 @@ section {
     color: #35424a;
     border-radius: 10px;
     padding: 20px;
-    background-color: rgba(218, 146, 146, 0.3);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.3); */
+    /* box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 .main-page h1, #contact-motto h1 {
@@ -184,8 +184,8 @@ section h1 span {
     border-radius: 10px;
     padding: 10px;
     font-size: 1.2rem;
-    background-color: rgba(218, 146, 146, 0.5);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.5); */
+    /* box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 .testimonial a p{
@@ -221,8 +221,8 @@ section h1 span {
     text-shadow: 2px 2px 2px #35424A;
     cursor: default;
     width: 100%;
-    background-color: rgba(218, 146, 146, 0.3);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.3); */
+    /* box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 .service-type h1 {
@@ -258,8 +258,8 @@ section h1 span {
     margin: auto 20px;
     border-radius: 5px;
     color: #35424a;
-    background-color: rgba(218, 146, 146, 0.3);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    background-color: rgba(218, 146, 146, 0.2);
+    /* box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
   
 }
 
@@ -401,8 +401,8 @@ section h1 span {
     margin: 20px auto;
     text-align: center;
     color: #35424a;
-    background-color: rgba(218, 146, 146, 0.3);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.3); */
+    /* box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 #contact-motto h1 span {
@@ -432,8 +432,8 @@ section h1 span {
     border-radius: 7px;
     padding: 15px;
     color: #35424a;
-    background-color: rgba(218, 146, 146, 0.4);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.4);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 #contact-details h4 {
@@ -485,8 +485,8 @@ section h1 span {
     justify-content: space-between;
     border-radius: 7px;
     padding: 15px;
-    background-color: rgba(218, 146, 146, 0.4);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(218, 146, 146, 0.4);
+    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75); */
 }
 
 #contactForm h2 {
@@ -573,8 +573,8 @@ section h1 span {
 }
 
 .mapouter {
-    background-color: rgba(255, 223, 223, 0.6);
-    box-shadow: 10px 10px 5px 0px rgba(53,66,74,0.75);
+    /* background-color: rgba(255, 223, 223, 0.6); */
+    box-shadow: 0px 0px 0px 0px rgba(53,66,74,0.75);
     border-radius: 5px;
     position: relative;
     width: 60%;
@@ -598,7 +598,7 @@ section h1 span {
     max-height: 78vh;
     max-width: 100%;
     border-radius: 5px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
 }
 
 /* NAVBAR & BURGER */
